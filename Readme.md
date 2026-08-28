@@ -26,4 +26,4 @@ The code successfully built without errors.
 4. Using another phone (or the emulator control panel), simulate an incoming call with a number starting with `140` (e.g., `1401234567`).
 5. Notice that the incoming call is instantly rejected and does not ring on the device.
 
-Let me know if you want to add any further features (like a history of blocked calls) or refine the UI!
+
