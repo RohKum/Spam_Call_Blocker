@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Glowing Cyber-Emerald Circular Ring -->
+    <path
+        android:pathData="M54,23 C36.88,23 23,36.88 23,54 C23,71.12 36.88,85 54,85 C71.12,85 85,71.12 85,54 C85,36.88 71.12,23 54,23 Z M54,80 C39.64,80 28,69.36 28,54 C28,38.64 39.64,28 54,28 C68.36,28 80,38.64 80,54 C80,69.36 68.36,80 54,80 Z"
+        android:fillColor="#00FF87" />
+
+    <!-- Central Shield Emblem Fill -->
+    <path
+        android:pathData="M54,32 L39,37 V48 C39,59 47,68 54,71 C61,68 69,59 69,48 V37 L54,32 Z"
+        android:fillColor="#00E676" />
+
+    <path
+        android:pathData="M54,32 L39,37 V48 C39,59 47,68 54,71 C61,68 69,59 69,48 V37 L54,32 Z"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- Phone Handset Receiver inside Shield -->
+    <path
+        android:pathData="M48,45 L50.5,48 C51,48.8 51,49.8 50.2,50.4 L48.8,51.8 C50.2,54.8 52.8,57.2 55.8,58.6 L57.2,57.2 C57.8,56.4 58.8,56.4 59.6,56.9 L62.6,59.4 C63.4,60 63.4,61.1 62.7,61.8 L59.7,64.8 C56.7,65.5 50,62.8 44,56.8 C38,50.8 35.3,44.1 36,41.1 L39,38.1 C39.7,37.4 40.8,37.4 41.4,38.2 L43.9,41.2 C44.5,42 44.4,43 43.6,43.7 L42.2,45.1 C42.2,45.1 48,45 48,45 Z"
+        android:fillColor="#070F18" />
+
+</vector>

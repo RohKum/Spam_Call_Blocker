@@ -1,0 +1,288 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.dev2drop.cleanring"
+4    android:versionCode="6"
+5    android:versionName="1.0.5" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="36" />
+10
+11    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+11-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:4:5-75
+11-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:4:22-72
+12    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+12-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:5:5-72
+12-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:5:22-69
+13    <uses-permission android:name="android.permission.ANSWER_PHONE_CALLS" />
+13-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:6:5-77
+13-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:6:22-74
+14    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+14-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:7:5-77
+14-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:7:22-74
+15    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+15-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:8:5-89
+15-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:8:22-86
+16    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+16-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:9:5-77
+16-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:9:22-74
+17    <uses-permission android:name="com.android.vending.BILLING" />
+17-->[com.android.billingclient:billing-ktx:8.0.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/2803ad40fe6efda419ecda140485d0c2/transformed/billing-ktx-8.0.0/AndroidManifest.xml:9:5-67
+17-->[com.android.billingclient:billing-ktx:8.0.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/2803ad40fe6efda419ecda140485d0c2/transformed/billing-ktx-8.0.0/AndroidManifest.xml:9:22-64
+18
+19    <queries>
+19-->[com.android.billingclient:billing:8.0.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/5e8d16ee0aa54948414e943567416b74/transformed/billing-8.0.0/AndroidManifest.xml:12:5-19:15
+20        <intent>
+20-->[com.android.billingclient:billing:8.0.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/5e8d16ee0aa54948414e943567416b74/transformed/billing-8.0.0/AndroidManifest.xml:13:9-15:18
+21            <action android:name="com.android.vending.billing.InAppBillingService.BIND" />
+21-->[com.android.billingclient:billing:8.0.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/5e8d16ee0aa54948414e943567416b74/transformed/billing-8.0.0/AndroidManifest.xml:14:13-91
+21-->[com.android.billingclient:billing:8.0.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/5e8d16ee0aa54948414e943567416b74/transformed/billing-8.0.0/AndroidManifest.xml:14:21-88
+22        </intent>
+23        <intent>
+23-->[com.android.billingclient:billing:8.0.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/5e8d16ee0aa54948414e943567416b74/transformed/billing-8.0.0/AndroidManifest.xml:16:9-18:18
+24            <action android:name="com.google.android.apps.play.billingtestcompanion.BillingOverrideService.BIND" />
+24-->[com.android.billingclient:billing:8.0.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/5e8d16ee0aa54948414e943567416b74/transformed/billing-8.0.0/AndroidManifest.xml:17:13-116
+24-->[com.android.billingclient:billing:8.0.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/5e8d16ee0aa54948414e943567416b74/transformed/billing-8.0.0/AndroidManifest.xml:17:21-113
+25        </intent>
+26    </queries>
+27
+28    <permission
+28-->[androidx.core:core:1.15.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/94de326d09099c74b0d4c00adc11c9d4/transformed/core-1.15.0/AndroidManifest.xml:22:5-24:47
+29        android:name="com.dev2drop.cleanring.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+29-->[androidx.core:core:1.15.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/94de326d09099c74b0d4c00adc11c9d4/transformed/core-1.15.0/AndroidManifest.xml:23:9-81
+30        android:protectionLevel="signature" />
+30-->[androidx.core:core:1.15.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/94de326d09099c74b0d4c00adc11c9d4/transformed/core-1.15.0/AndroidManifest.xml:24:9-44
+31
+32    <uses-permission android:name="com.dev2drop.cleanring.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+32-->[androidx.core:core:1.15.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/94de326d09099c74b0d4c00adc11c9d4/transformed/core-1.15.0/AndroidManifest.xml:26:5-97
+32-->[androidx.core:core:1.15.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/94de326d09099c74b0d4c00adc11c9d4/transformed/core-1.15.0/AndroidManifest.xml:26:22-94
+33    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+34    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+34-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/rohitkumar/.gradle/caches/8.14/transforms/1f70ad5573284d1fdcda3aef0a66358b/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:24:5-79
+34-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/rohitkumar/.gradle/caches/8.14/transforms/1f70ad5573284d1fdcda3aef0a66358b/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:24:22-76
+35    <uses-permission android:name="android.permission.INTERNET" />
+35-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/rohitkumar/.gradle/caches/8.14/transforms/1f70ad5573284d1fdcda3aef0a66358b/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:25:5-67
+35-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/rohitkumar/.gradle/caches/8.14/transforms/1f70ad5573284d1fdcda3aef0a66358b/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:25:22-64
+36
+37    <application
+37-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:11:5-49:19
+38        android:name="com.dev2drop.cleanring.SpamBlockerApp"
+38-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:12:9-39
+39        android:allowBackup="true"
+39-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:13:9-35
+40        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+40-->[androidx.core:core:1.15.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/94de326d09099c74b0d4c00adc11c9d4/transformed/core-1.15.0/AndroidManifest.xml:28:18-86
+41        android:extractNativeLibs="false"
+42        android:icon="@mipmap/ic_launcher"
+42-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:14:9-43
+43        android:label="@string/app_name"
+43-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:15:9-41
+44        android:roundIcon="@mipmap/ic_launcher"
+44-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:16:9-48
+45        android:supportsRtl="true"
+45-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:17:9-35
+46        android:theme="@style/Theme.SpamBlocker" >
+46-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:18:9-49
+47        <activity
+47-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:20:9-29:20
+48            android:name="com.dev2drop.cleanring.MainActivity"
+48-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:21:13-41
+49            android:exported="true"
+49-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:22:13-36
+50            android:theme="@style/Theme.SpamBlocker"
+50-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:23:13-53
+51            android:windowSoftInputMode="adjustResize" >
+51-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:24:13-55
+52            <intent-filter>
+52-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:25:13-28:29
+53                <action android:name="android.intent.action.MAIN" />
+53-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:26:17-69
+53-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:26:25-66
+54
+55                <category android:name="android.intent.category.LAUNCHER" />
+55-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:27:17-77
+55-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:27:27-74
+56            </intent-filter>
+57        </activity>
+58
+59        <service
+59-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:31:9-38:19
+60            android:name="com.dev2drop.cleanring.service.SpamCallScreeningService"
+60-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:32:13-61
+61            android:exported="true"
+61-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:34:13-36
+62            android:permission="android.permission.BIND_SCREENING_SERVICE" >
+62-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:33:13-75
+63            <intent-filter>
+63-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:35:13-37:29
+64                <action android:name="android.telecom.CallScreeningService" />
+64-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:36:17-79
+64-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:36:25-76
+65            </intent-filter>
+66        </service>
+67        <service
+67-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:40:9-47:19
+68            android:name="com.dev2drop.cleanring.service.ProtectionService"
+68-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:41:13-54
+69            android:exported="false"
+69-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:43:13-37
+70            android:foregroundServiceType="specialUse" >
+70-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:42:13-55
+71            <property
+71-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:44:13-46:78
+72                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+72-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:45:17-76
+73                android:value="Ensure call screening service is available" />
+73-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:46:17-75
+74        </service>
+75
+76        <meta-data
+76-->[com.android.billingclient:billing:8.0.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/5e8d16ee0aa54948414e943567416b74/transformed/billing-8.0.0/AndroidManifest.xml:22:9-24:37
+77            android:name="com.google.android.play.billingclient.version"
+77-->[com.android.billingclient:billing:8.0.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/5e8d16ee0aa54948414e943567416b74/transformed/billing-8.0.0/AndroidManifest.xml:23:13-73
+78            android:value="8.0.0" />
+78-->[com.android.billingclient:billing:8.0.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/5e8d16ee0aa54948414e943567416b74/transformed/billing-8.0.0/AndroidManifest.xml:24:13-34
+79
+80        <activity
+80-->[com.android.billingclient:billing:8.0.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/5e8d16ee0aa54948414e943567416b74/transformed/billing-8.0.0/AndroidManifest.xml:26:9-30:75
+81            android:name="com.android.billingclient.api.ProxyBillingActivity"
+81-->[com.android.billingclient:billing:8.0.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/5e8d16ee0aa54948414e943567416b74/transformed/billing-8.0.0/AndroidManifest.xml:27:13-78
+82            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+82-->[com.android.billingclient:billing:8.0.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/5e8d16ee0aa54948414e943567416b74/transformed/billing-8.0.0/AndroidManifest.xml:28:13-96
+83            android:exported="false"
+83-->[com.android.billingclient:billing:8.0.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/5e8d16ee0aa54948414e943567416b74/transformed/billing-8.0.0/AndroidManifest.xml:29:13-37
+84            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+84-->[com.android.billingclient:billing:8.0.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/5e8d16ee0aa54948414e943567416b74/transformed/billing-8.0.0/AndroidManifest.xml:30:13-72
+85        <activity
+85-->[com.android.billingclient:billing:8.0.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/5e8d16ee0aa54948414e943567416b74/transformed/billing-8.0.0/AndroidManifest.xml:31:9-35:75
+86            android:name="com.android.billingclient.api.ProxyBillingActivityV2"
+86-->[com.android.billingclient:billing:8.0.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/5e8d16ee0aa54948414e943567416b74/transformed/billing-8.0.0/AndroidManifest.xml:32:13-80
+87            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+87-->[com.android.billingclient:billing:8.0.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/5e8d16ee0aa54948414e943567416b74/transformed/billing-8.0.0/AndroidManifest.xml:33:13-96
+88            android:exported="false"
+88-->[com.android.billingclient:billing:8.0.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/5e8d16ee0aa54948414e943567416b74/transformed/billing-8.0.0/AndroidManifest.xml:34:13-37
+89            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+89-->[com.android.billingclient:billing:8.0.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/5e8d16ee0aa54948414e943567416b74/transformed/billing-8.0.0/AndroidManifest.xml:35:13-72
+90        <activity
+90-->[com.google.android.gms:play-services-base:18.5.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/e1465d74b907d61452e8663d3264ef11/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:9-173
+91            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+91-->[com.google.android.gms:play-services-base:18.5.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/e1465d74b907d61452e8663d3264ef11/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:19-85
+92            android:exported="false"
+92-->[com.google.android.gms:play-services-base:18.5.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/e1465d74b907d61452e8663d3264ef11/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:146-170
+93            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+93-->[com.google.android.gms:play-services-base:18.5.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/e1465d74b907d61452e8663d3264ef11/transformed/play-services-base-18.5.0/AndroidManifest.xml:5:86-145
+94
+95        <meta-data
+95-->[com.google.android.gms:play-services-basement:18.4.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/c60e023d762808a9d9987a649fb87216/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:9-122
+96            android:name="com.google.android.gms.version"
+96-->[com.google.android.gms:play-services-basement:18.4.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/c60e023d762808a9d9987a649fb87216/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:20-65
+97            android:value="@integer/google_play_services_version" />
+97-->[com.google.android.gms:play-services-basement:18.4.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/c60e023d762808a9d9987a649fb87216/transformed/play-services-basement-18.4.0/AndroidManifest.xml:6:66-119
+98
+99        <provider
+99-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/rohitkumar/.gradle/caches/8.14/transforms/37b05d58d6744aef987212500e36f011/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:24:9-32:20
+100            android:name="androidx.startup.InitializationProvider"
+100-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/rohitkumar/.gradle/caches/8.14/transforms/37b05d58d6744aef987212500e36f011/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:25:13-67
+101            android:authorities="com.dev2drop.cleanring.androidx-startup"
+101-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/rohitkumar/.gradle/caches/8.14/transforms/37b05d58d6744aef987212500e36f011/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:26:13-68
+102            android:exported="false" >
+102-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/rohitkumar/.gradle/caches/8.14/transforms/37b05d58d6744aef987212500e36f011/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:27:13-37
+103            <meta-data
+103-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/rohitkumar/.gradle/caches/8.14/transforms/37b05d58d6744aef987212500e36f011/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:29:13-31:52
+104                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+104-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/rohitkumar/.gradle/caches/8.14/transforms/37b05d58d6744aef987212500e36f011/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:30:17-78
+105                android:value="androidx.startup" />
+105-->[androidx.lifecycle:lifecycle-process:2.8.7] /Users/rohitkumar/.gradle/caches/8.14/transforms/37b05d58d6744aef987212500e36f011/transformed/lifecycle-process-2.8.7/AndroidManifest.xml:31:17-49
+106            <meta-data
+106-->[androidx.emoji2:emoji2:1.3.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/71694744e68de8d8ad7bbc9bdfa17ee4/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+107                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+107-->[androidx.emoji2:emoji2:1.3.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/71694744e68de8d8ad7bbc9bdfa17ee4/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+108                android:value="androidx.startup" />
+108-->[androidx.emoji2:emoji2:1.3.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/71694744e68de8d8ad7bbc9bdfa17ee4/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+109            <meta-data
+109-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rohitkumar/.gradle/caches/8.14/transforms/9a386fb0321b3624c1d99ba0a1edf3b4/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+110                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+110-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rohitkumar/.gradle/caches/8.14/transforms/9a386fb0321b3624c1d99ba0a1edf3b4/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+111                android:value="androidx.startup" />
+111-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rohitkumar/.gradle/caches/8.14/transforms/9a386fb0321b3624c1d99ba0a1edf3b4/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+112        </provider>
+113
+114        <service
+114-->[androidx.room:room-runtime:2.6.1] /Users/rohitkumar/.gradle/caches/8.14/transforms/e7350166233e84b90e95041c94345037/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
+115            android:name="androidx.room.MultiInstanceInvalidationService"
+115-->[androidx.room:room-runtime:2.6.1] /Users/rohitkumar/.gradle/caches/8.14/transforms/e7350166233e84b90e95041c94345037/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
+116            android:directBootAware="true"
+116-->[androidx.room:room-runtime:2.6.1] /Users/rohitkumar/.gradle/caches/8.14/transforms/e7350166233e84b90e95041c94345037/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
+117            android:exported="false" />
+117-->[androidx.room:room-runtime:2.6.1] /Users/rohitkumar/.gradle/caches/8.14/transforms/e7350166233e84b90e95041c94345037/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
+118
+119        <receiver
+119-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rohitkumar/.gradle/caches/8.14/transforms/9a386fb0321b3624c1d99ba0a1edf3b4/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+120            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+120-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rohitkumar/.gradle/caches/8.14/transforms/9a386fb0321b3624c1d99ba0a1edf3b4/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+121            android:directBootAware="false"
+121-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rohitkumar/.gradle/caches/8.14/transforms/9a386fb0321b3624c1d99ba0a1edf3b4/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+122            android:enabled="true"
+122-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rohitkumar/.gradle/caches/8.14/transforms/9a386fb0321b3624c1d99ba0a1edf3b4/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+123            android:exported="true"
+123-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rohitkumar/.gradle/caches/8.14/transforms/9a386fb0321b3624c1d99ba0a1edf3b4/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+124            android:permission="android.permission.DUMP" >
+124-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rohitkumar/.gradle/caches/8.14/transforms/9a386fb0321b3624c1d99ba0a1edf3b4/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+125            <intent-filter>
+125-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rohitkumar/.gradle/caches/8.14/transforms/9a386fb0321b3624c1d99ba0a1edf3b4/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+126                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+126-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rohitkumar/.gradle/caches/8.14/transforms/9a386fb0321b3624c1d99ba0a1edf3b4/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+126-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rohitkumar/.gradle/caches/8.14/transforms/9a386fb0321b3624c1d99ba0a1edf3b4/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+127            </intent-filter>
+128            <intent-filter>
+128-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rohitkumar/.gradle/caches/8.14/transforms/9a386fb0321b3624c1d99ba0a1edf3b4/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+129                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+129-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rohitkumar/.gradle/caches/8.14/transforms/9a386fb0321b3624c1d99ba0a1edf3b4/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+129-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rohitkumar/.gradle/caches/8.14/transforms/9a386fb0321b3624c1d99ba0a1edf3b4/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+130            </intent-filter>
+131            <intent-filter>
+131-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rohitkumar/.gradle/caches/8.14/transforms/9a386fb0321b3624c1d99ba0a1edf3b4/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+132                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+132-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rohitkumar/.gradle/caches/8.14/transforms/9a386fb0321b3624c1d99ba0a1edf3b4/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+132-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rohitkumar/.gradle/caches/8.14/transforms/9a386fb0321b3624c1d99ba0a1edf3b4/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+133            </intent-filter>
+134            <intent-filter>
+134-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rohitkumar/.gradle/caches/8.14/transforms/9a386fb0321b3624c1d99ba0a1edf3b4/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+135                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+135-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rohitkumar/.gradle/caches/8.14/transforms/9a386fb0321b3624c1d99ba0a1edf3b4/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+135-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/rohitkumar/.gradle/caches/8.14/transforms/9a386fb0321b3624c1d99ba0a1edf3b4/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+136            </intent-filter>
+137        </receiver>
+138
+139        <service
+139-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/rohitkumar/.gradle/caches/8.14/transforms/1f70ad5573284d1fdcda3aef0a66358b/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:28:9-34:19
+140            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+140-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/rohitkumar/.gradle/caches/8.14/transforms/1f70ad5573284d1fdcda3aef0a66358b/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:29:13-103
+141            android:exported="false" >
+141-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/rohitkumar/.gradle/caches/8.14/transforms/1f70ad5573284d1fdcda3aef0a66358b/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:30:13-37
+142            <meta-data
+142-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/rohitkumar/.gradle/caches/8.14/transforms/1f70ad5573284d1fdcda3aef0a66358b/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:31:13-33:39
+143                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+143-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/rohitkumar/.gradle/caches/8.14/transforms/1f70ad5573284d1fdcda3aef0a66358b/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:32:17-94
+144                android:value="cct" />
+144-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/rohitkumar/.gradle/caches/8.14/transforms/1f70ad5573284d1fdcda3aef0a66358b/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:33:17-36
+145        </service>
+146        <service
+146-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/rohitkumar/.gradle/caches/8.14/transforms/8eeeaad91e8f33e299ba0fb0472ac87a/transformed/transport-runtime-3.1.8/AndroidManifest.xml:26:9-30:19
+147            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+147-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/rohitkumar/.gradle/caches/8.14/transforms/8eeeaad91e8f33e299ba0fb0472ac87a/transformed/transport-runtime-3.1.8/AndroidManifest.xml:27:13-117
+148            android:exported="false"
+148-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/rohitkumar/.gradle/caches/8.14/transforms/8eeeaad91e8f33e299ba0fb0472ac87a/transformed/transport-runtime-3.1.8/AndroidManifest.xml:28:13-37
+149            android:permission="android.permission.BIND_JOB_SERVICE" >
+149-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/rohitkumar/.gradle/caches/8.14/transforms/8eeeaad91e8f33e299ba0fb0472ac87a/transformed/transport-runtime-3.1.8/AndroidManifest.xml:29:13-69
+150        </service>
+151
+152        <receiver
+152-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/rohitkumar/.gradle/caches/8.14/transforms/8eeeaad91e8f33e299ba0fb0472ac87a/transformed/transport-runtime-3.1.8/AndroidManifest.xml:32:9-34:40
+153            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+153-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/rohitkumar/.gradle/caches/8.14/transforms/8eeeaad91e8f33e299ba0fb0472ac87a/transformed/transport-runtime-3.1.8/AndroidManifest.xml:33:13-132
+154            android:exported="false" />
+154-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/rohitkumar/.gradle/caches/8.14/transforms/8eeeaad91e8f33e299ba0fb0472ac87a/transformed/transport-runtime-3.1.8/AndroidManifest.xml:34:13-37
+155    </application>
+156
+157</manifest>
