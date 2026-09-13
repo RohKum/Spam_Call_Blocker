@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.dev2drop.cleanring.util.PhoneNumberNormalizerTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-09-13T18:17:44.566Z" hostname="Rohits-MacBook-Air.local" time="0.03">
+<testsuite name="com.dev2drop.cleanring.util.PhoneNumberNormalizerTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-09-13T18:33:15.974Z" hostname="Rohits-MacBook-Air.local" time="0.011">
   <properties/>
-  <testcase name="testUKPhoneNumberMatching" classname="com.dev2drop.cleanring.util.PhoneNumberNormalizerTest" time="0.005"/>
-  <testcase name="testIndiaPhoneNumberMatching" classname="com.dev2drop.cleanring.util.PhoneNumberNormalizerTest" time="0.003"/>
-  <testcase name="testUSPhoneNumberMatching" classname="com.dev2drop.cleanring.util.PhoneNumberNormalizerTest" time="0.002"/>
-  <testcase name="testGermanyPhoneNumberMatching" classname="com.dev2drop.cleanring.util.PhoneNumberNormalizerTest" time="0.008"/>
-  <testcase name="testFormatForDisplay" classname="com.dev2drop.cleanring.util.PhoneNumberNormalizerTest" time="0.011"/>
-  <testcase name="testCountryCallingCodes" classname="com.dev2drop.cleanring.util.PhoneNumberNormalizerTest" time="0.0"/>
+  <testcase name="testUKPhoneNumberMatching" classname="com.dev2drop.cleanring.util.PhoneNumberNormalizerTest" time="0.003"/>
+  <testcase name="testIndiaPhoneNumberMatching" classname="com.dev2drop.cleanring.util.PhoneNumberNormalizerTest" time="0.001"/>
+  <testcase name="testUSPhoneNumberMatching" classname="com.dev2drop.cleanring.util.PhoneNumberNormalizerTest" time="0.001"/>
+  <testcase name="testGermanyPhoneNumberMatching" classname="com.dev2drop.cleanring.util.PhoneNumberNormalizerTest" time="0.002"/>
+  <testcase name="testFormatForDisplay" classname="com.dev2drop.cleanring.util.PhoneNumberNormalizerTest" time="0.003"/>
+  <testcase name="testCountryCallingCodes" classname="com.dev2drop.cleanring.util.PhoneNumberNormalizerTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -61650,7 +61650,6 @@ com.dev2drop.cleanring.billing.BillingManager:
     public static kotlinx.coroutines.flow.StateFlow getAvailableSubscriptions()
     public static void launchSubscriptionFlow()
     public final void startConnection()
-    public final void updateSubscribedState(boolean)
 com.dev2drop.cleanring.billing.SubscriptionInfo:
     public static final int $stable
     static void <clinit>()

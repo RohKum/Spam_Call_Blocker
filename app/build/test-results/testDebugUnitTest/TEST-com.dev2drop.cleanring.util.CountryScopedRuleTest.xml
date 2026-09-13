@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.dev2drop.cleanring.util.CountryScopedRuleTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-09-13T18:17:44.158Z" hostname="Rohits-MacBook-Air.local" time="0.406">
+<testsuite name="com.dev2drop.cleanring.util.CountryScopedRuleTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-09-13T18:33:15.882Z" hostname="Rohits-MacBook-Air.local" time="0.089">
   <properties/>
-  <testcase name="testPatternNormalizationAndValidation" classname="com.dev2drop.cleanring.util.CountryScopedRuleTest" time="0.334"/>
-  <testcase name="testCountryFlagEmoji" classname="com.dev2drop.cleanring.util.CountryScopedRuleTest" time="0.034"/>
-  <testcase name="testPatternSanitizerForSelectedCountry" classname="com.dev2drop.cleanring.util.CountryScopedRuleTest" time="0.004"/>
-  <testcase name="testCountryScopedRuleMatching" classname="com.dev2drop.cleanring.util.CountryScopedRuleTest" time="0.033"/>
+  <testcase name="testPatternNormalizationAndValidation" classname="com.dev2drop.cleanring.util.CountryScopedRuleTest" time="0.058"/>
+  <testcase name="testCountryFlagEmoji" classname="com.dev2drop.cleanring.util.CountryScopedRuleTest" time="0.0"/>
+  <testcase name="testPatternSanitizerForSelectedCountry" classname="com.dev2drop.cleanring.util.CountryScopedRuleTest" time="0.01"/>
+  <testcase name="testCountryScopedRuleMatching" classname="com.dev2drop.cleanring.util.CountryScopedRuleTest" time="0.021"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

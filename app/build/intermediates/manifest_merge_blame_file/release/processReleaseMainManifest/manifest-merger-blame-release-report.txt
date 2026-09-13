@@ -27,8 +27,8 @@
 16-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:9:5-77
 16-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:9:22-74
 17    <uses-permission android:name="com.android.vending.BILLING" />
-17-->[com.android.billingclient:billing-ktx:8.0.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/2803ad40fe6efda419ecda140485d0c2/transformed/billing-ktx-8.0.0/AndroidManifest.xml:9:5-67
-17-->[com.android.billingclient:billing-ktx:8.0.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/2803ad40fe6efda419ecda140485d0c2/transformed/billing-ktx-8.0.0/AndroidManifest.xml:9:22-64
+17-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:10:5-67
+17-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:10:22-64
 18
 19    <queries>
 19-->[com.android.billingclient:billing:8.0.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/5e8d16ee0aa54948414e943567416b74/transformed/billing-8.0.0/AndroidManifest.xml:12:5-19:15
@@ -65,75 +65,75 @@
 35-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/rohitkumar/.gradle/caches/8.14/transforms/1f70ad5573284d1fdcda3aef0a66358b/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:25:22-64
 36
 37    <application
-37-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:11:5-49:19
+37-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:12:5-50:19
 38        android:name="com.dev2drop.cleanring.SpamBlockerApp"
-38-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:12:9-39
+38-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:13:9-39
 39        android:allowBackup="true"
-39-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:13:9-35
+39-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:14:9-35
 40        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 40-->[androidx.core:core:1.15.0] /Users/rohitkumar/.gradle/caches/8.14/transforms/94de326d09099c74b0d4c00adc11c9d4/transformed/core-1.15.0/AndroidManifest.xml:28:18-86
 41        android:extractNativeLibs="false"
 42        android:icon="@mipmap/ic_launcher"
-42-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:14:9-43
+42-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:15:9-43
 43        android:label="@string/app_name"
-43-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:15:9-41
+43-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:16:9-41
 44        android:roundIcon="@mipmap/ic_launcher"
-44-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:16:9-48
+44-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:17:9-48
 45        android:supportsRtl="true"
-45-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:17:9-35
+45-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:18:9-35
 46        android:theme="@style/Theme.SpamBlocker" >
-46-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:18:9-49
+46-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:19:9-49
 47        <activity
-47-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:20:9-29:20
+47-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:21:9-30:20
 48            android:name="com.dev2drop.cleanring.MainActivity"
-48-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:21:13-41
+48-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:22:13-41
 49            android:exported="true"
-49-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:22:13-36
+49-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:23:13-36
 50            android:theme="@style/Theme.SpamBlocker"
-50-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:23:13-53
+50-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:24:13-53
 51            android:windowSoftInputMode="adjustResize" >
-51-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:24:13-55
+51-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:25:13-55
 52            <intent-filter>
-52-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:25:13-28:29
+52-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:26:13-29:29
 53                <action android:name="android.intent.action.MAIN" />
-53-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:26:17-69
-53-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:26:25-66
+53-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:27:17-69
+53-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:27:25-66
 54
 55                <category android:name="android.intent.category.LAUNCHER" />
-55-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:27:17-77
-55-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:27:27-74
+55-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:28:17-77
+55-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:28:27-74
 56            </intent-filter>
 57        </activity>
 58
 59        <service
-59-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:31:9-38:19
+59-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:32:9-39:19
 60            android:name="com.dev2drop.cleanring.service.SpamCallScreeningService"
-60-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:32:13-61
+60-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:33:13-61
 61            android:exported="true"
-61-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:34:13-36
+61-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:35:13-36
 62            android:permission="android.permission.BIND_SCREENING_SERVICE" >
-62-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:33:13-75
+62-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:34:13-75
 63            <intent-filter>
-63-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:35:13-37:29
+63-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:36:13-38:29
 64                <action android:name="android.telecom.CallScreeningService" />
-64-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:36:17-79
-64-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:36:25-76
+64-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:37:17-79
+64-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:37:25-76
 65            </intent-filter>
 66        </service>
 67        <service
-67-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:40:9-47:19
+67-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:41:9-48:19
 68            android:name="com.dev2drop.cleanring.service.ProtectionService"
-68-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:41:13-54
+68-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:42:13-54
 69            android:exported="false"
-69-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:43:13-37
+69-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:44:13-37
 70            android:foregroundServiceType="specialUse" >
-70-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:42:13-55
+70-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:43:13-55
 71            <property
-71-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:44:13-46:78
+71-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:45:13-47:78
 72                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
-72-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:45:17-76
+72-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:46:17-76
 73                android:value="Ensure call screening service is available" />
-73-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:46:17-75
+73-->/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/src/main/AndroidManifest.xml:47:17-75
 74        </service>
 75
 76        <meta-data

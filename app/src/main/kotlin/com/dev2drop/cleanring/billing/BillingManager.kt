@@ -15,6 +15,7 @@ import com.android.billingclient.api.Purchase
 import com.android.billingclient.api.PurchasesUpdatedListener
 import com.android.billingclient.api.QueryProductDetailsParams
 import com.android.billingclient.api.QueryPurchasesParams
+import com.dev2drop.cleanring.SpamBlockerApp
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -220,5 +221,10 @@ class BillingManager(
     private fun updateSubscribedState(subscribed: Boolean) {
         _isSubscribed.value = subscribed
         sharedPrefs.edit().putBoolean("is_subscribed", subscribed).apply()
+        try {
+            SpamBlockerApp.instance.spamRepository.setSubscribed(subscribed)
+        } catch (e: Exception) {
+            Log.e(TAG, "Failed to sync subscription state to repository", e)
+        }
     }
 }
