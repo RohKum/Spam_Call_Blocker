@@ -45,7 +45,11 @@ app.*.map.json
 /android/app/release
 
 
-
+l
 #  APK/AAB files from being committed even
 *.apk
 *.aab
+
+
+# Gradle
+.gradle/
