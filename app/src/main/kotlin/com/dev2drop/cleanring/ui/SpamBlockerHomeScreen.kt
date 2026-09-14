@@ -73,6 +73,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -86,6 +87,7 @@ import com.dev2drop.cleanring.data.RuleEntity
 import com.dev2drop.cleanring.ui.components.AddEditRuleDialog
 import com.dev2drop.cleanring.ui.components.HistoryTabContent
 import com.dev2drop.cleanring.ui.components.OnboardingScreen
+import com.dev2drop.cleanring.ui.components.PremiumStatusDialog
 import com.dev2drop.cleanring.ui.components.RuleItemCard
 import com.dev2drop.cleanring.ui.components.StatusCard
 import com.dev2drop.cleanring.ui.components.SubscriptionScreen
@@ -141,6 +143,8 @@ fun SpamBlockerHomeScreen(
     val countryFlagEmoji = remember(countryIso) { PhoneNumberNormalizer.countryIsoToFlagEmoji(countryIso) }
     val lang = uiState.selectedLanguage
 
+    var isPremiumStatusDialogOpen by remember { mutableStateOf(false) }
+
     fun tr(key: String): String = AppTranslations.getString(key, lang)
 
     if (!uiState.isOnboardingCompleted) {
@@ -165,6 +169,7 @@ fun SpamBlockerHomeScreen(
                 isSubscribed = uiState.isSubscribed,
                 trialDaysRemaining = uiState.trialDaysRemaining,
                 onOpenPaywall = onOpenPaywall,
+                onOpenPremiumStatus = { isPremiumStatusDialogOpen = true },
                 onOpenSettings = { onSelectTab(3) }
             )
         },
@@ -316,6 +321,7 @@ fun SpamBlockerHomeScreen(
                         onToggleEmergencyDisable = onToggleEmergencyDisable,
                         onReopenOnboarding = onReopenOnboarding,
                         onOpenPaywall = onOpenPaywall,
+                        onOpenPremiumStatus = { isPremiumStatusDialogOpen = true },
                         onSelectLanguage = onSelectLanguage,
                         onExportRules = onExportRules,
                         onImportRules = onImportRules
@@ -355,6 +361,12 @@ fun SpamBlockerHomeScreen(
             lang = lang
         )
     }
+
+    if (isPremiumStatusDialogOpen) {
+        PremiumStatusDialog(
+            onDismissRequest = { isPremiumStatusDialogOpen = false }
+        )
+    }
 }
 
 @Composable
@@ -364,6 +376,7 @@ private fun MainDashboardHeader(
     isSubscribed: Boolean,
     trialDaysRemaining: Int,
     onOpenPaywall: () -> Unit,
+    onOpenPremiumStatus: () -> Unit,
     onOpenSettings: () -> Unit
 ) {
     Row(
@@ -418,8 +431,28 @@ private fun MainDashboardHeader(
             )
         }
 
-        // Trial Badge Chip
-        if (!isSubscribed) {
+        // Subscription Status Chip
+        if (isSubscribed) {
+            Surface(
+                onClick = onOpenPremiumStatus,
+                shape = RoundedCornerShape(12.dp),
+                color = MaterialTheme.colorScheme.primaryContainer,
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary),
+                modifier = Modifier.padding(end = 4.dp)
+            ) {
+                Row(
+                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        text = "👑 PREMIUM",
+                        fontSize = 11.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.primary
+                    )
+                }
+            }
+        } else {
             Surface(
                 onClick = onOpenPaywall,
                 shape = RoundedCornerShape(12.dp),
@@ -842,18 +875,95 @@ private fun BottomDecorativeWave() {
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .height(60.dp),
+            .height(110.dp),
         contentAlignment = Alignment.Center
     ) {
-        Text(
-            text = "Less Spam. More Peace.",
-            style = MaterialTheme.typography.bodyLarge.copy(
-                fontWeight = FontWeight.Bold,
-                fontSize = 17.sp,
-                fontStyle = FontStyle.Italic
-            ),
-            color = MaterialTheme.colorScheme.primary.copy(alpha = 0.85f)
-        )
+        Canvas(modifier = Modifier.fillMaxSize()) {
+            val width = size.width
+            val height = size.height
+
+            // Back Dark Mountain Wave Path
+            val backWave = Path().apply {
+                moveTo(0f, height * 0.5f)
+                cubicTo(
+                    width * 0.25f, height * 0.2f,
+                    width * 0.6f, height * 0.8f,
+                    width, height * 0.4f
+                )
+                lineTo(width, height)
+                lineTo(0f, height)
+                close()
+            }
+            drawPath(
+                path = backWave,
+                brush = Brush.verticalGradient(
+                    colors = listOf(
+                        Color(0xFF00382B).copy(alpha = 0.6f),
+                        Color(0xFF071019)
+                    )
+                )
+            )
+
+            // Front Neon Mountain Wave Path
+            val frontWave = Path().apply {
+                moveTo(0f, height * 0.7f)
+                cubicTo(
+                    width * 0.35f, height * 0.4f,
+                    width * 0.75f, height * 0.9f,
+                    width, height * 0.6f
+                )
+                lineTo(width, height)
+                lineTo(0f, height)
+                close()
+            }
+            drawPath(
+                path = frontWave,
+                brush = Brush.verticalGradient(
+                    colors = listOf(
+                        Color(0xFF00FF88).copy(alpha = 0.25f),
+                        Color(0xFF00BFA5).copy(alpha = 0.05f)
+                    )
+                )
+            )
+
+            val frontWaveStroke = Path().apply {
+                moveTo(0f, height * 0.7f)
+                cubicTo(
+                    width * 0.35f, height * 0.4f,
+                    width * 0.75f, height * 0.9f,
+                    width, height * 0.6f
+                )
+            }
+            drawPath(
+                path = frontWaveStroke,
+                color = Color(0xFF00FF88).copy(alpha = 0.7f),
+                style = Stroke(width = 2.dp.toPx(), cap = StrokeCap.Round)
+            )
+        }
+
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier.padding(bottom = 8.dp)
+        ) {
+            Text(
+                text = "Less Spam.",
+                style = MaterialTheme.typography.titleMedium.copy(
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 18.sp,
+                    fontStyle = FontStyle.Italic
+                ),
+                color = Color(0xFF00FF88)
+            )
+            Text(
+                text = "More Peace.",
+                style = MaterialTheme.typography.titleLarge.copy(
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 21.sp,
+                    fontStyle = FontStyle.Italic
+                ),
+                color = Color(0xFF00FF88)
+            )
+        }
     }
 }
 
@@ -983,6 +1093,7 @@ private fun SettingsTabContent(
     onToggleEmergencyDisable: () -> Unit,
     onReopenOnboarding: () -> Unit,
     onOpenPaywall: () -> Unit,
+    onOpenPremiumStatus: () -> Unit,
     onSelectLanguage: (String) -> Unit,
     onExportRules: () -> Unit,
     onImportRules: () -> Unit
@@ -993,6 +1104,58 @@ private fun SettingsTabContent(
         modifier = Modifier.fillMaxSize(),
         contentPadding = PaddingValues(16.dp)
     ) {
+        // Exclusive Active Premium Member Status Card
+        if (uiState.isSubscribed) {
+            item {
+                Card(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(bottom = 16.dp)
+                        .clickable { onOpenPremiumStatus() },
+                    shape = RoundedCornerShape(18.dp),
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer),
+                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary)
+                ) {
+                    Row(
+                        modifier = Modifier.padding(16.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Surface(
+                            modifier = Modifier.size(44.dp),
+                            shape = CircleShape,
+                            color = MaterialTheme.colorScheme.primary
+                        ) {
+                            Box(contentAlignment = Alignment.Center) {
+                                Text("👑", fontSize = 22.sp)
+                            }
+                        }
+
+                        Spacer(modifier = Modifier.width(14.dp))
+
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(
+                                text = "✨ Clean Ring Premium Active",
+                                style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
+                                color = MaterialTheme.colorScheme.onPrimaryContainer
+                            )
+                            Spacer(modifier = Modifier.height(2.dp))
+                            Text(
+                                text = "Thank you for supporting Clean Ring! Unlimited protection is active.",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.85f)
+                            )
+                        }
+
+                        Icon(
+                            imageVector = Icons.Default.ChevronRight,
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.onPrimaryContainer
+                        )
+                    }
+                }
+            }
+        }
+
         item {
             StatusCard(
                 isDefaultRole = uiState.isDefaultRole,

@@ -392,6 +392,7 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color ic_launcher_background
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -637,6 +638,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable clean_ring_icon_precise
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -939,6 +941,7 @@ mipmap ic_launcher
 mipmap ic_launcher_background
 mipmap ic_launcher_foreground
 mipmap ic_launcher_monochrome
+mipmap ic_launcher_round
 raw com_android_billingclient_heterodyne_info
 raw com_android_billingclient_registration_info
 string abc_action_bar_home_description

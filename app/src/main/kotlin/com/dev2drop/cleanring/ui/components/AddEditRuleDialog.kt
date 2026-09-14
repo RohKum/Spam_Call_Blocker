@@ -14,11 +14,8 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Phone
-import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -44,7 +41,6 @@ import androidx.compose.ui.unit.sp
 import com.dev2drop.cleanring.data.RuleAction
 import com.dev2drop.cleanring.data.RuleEntity
 import com.dev2drop.cleanring.data.RuleType
-import com.dev2drop.cleanring.util.AppTranslations
 import com.dev2drop.cleanring.util.PhoneNumberNormalizer
 
 @Composable
@@ -60,8 +56,6 @@ fun AddEditRuleDialog(
     val context = LocalContext.current
     val detectedCountryIso = remember { PhoneNumberNormalizer.detectCountryIso(context) }
     val countryCode = remember(initialRule, detectedCountryIso) { initialRule?.countryCode ?: detectedCountryIso }
-
-    fun tr(key: String): String = AppTranslations.getString(key, lang)
 
     val countryFlagEmoji = remember(countryCode) { PhoneNumberNormalizer.countryIsoToFlagEmoji(countryCode) }
     val callingCodeInt = remember(countryCode) { PhoneNumberNormalizer.getCountryCallingCode(countryCode) }
@@ -92,10 +86,6 @@ fun AddEditRuleDialog(
         PhoneNumberNormalizer.validateForCountry(sanitizedPattern, countryCode, ruleType)
     }
 
-    val normalizedInfo = remember(sanitizedPattern, countryCode) {
-        PhoneNumberNormalizer.getNormalizedPattern(sanitizedPattern, countryCode)
-    }
-
     val exampleMatches = remember(sanitizedPattern, countryCode, ruleType) {
         if (sanitizedPattern.isBlank()) emptyList()
         else if (ruleType == RuleType.EXACT) {
@@ -118,7 +108,7 @@ fun AddEditRuleDialog(
         shape = RoundedCornerShape(20.dp),
         title = {
             Text(
-                text = if (initialRule != null) tr("edit_rule") else tr("create_rule"),
+                text = if (initialRule != null) "Edit Blocking Rule" else "Block Unwanted Calls",
                 fontWeight = FontWeight.Bold
             )
         },
@@ -128,18 +118,18 @@ fun AddEditRuleDialog(
                     .fillMaxWidth()
                     .verticalScroll(rememberScrollState())
             ) {
-                // Static Country Display
+                // Country Display
                 Row(
                     modifier = Modifier.fillMaxWidth().padding(bottom = 12.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Text(
-                        text = tr("country_region"),
+                        text = "Country:",
                         style = MaterialTheme.typography.labelMedium,
                         fontWeight = FontWeight.SemiBold,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
-                    Spacer(modifier = Modifier.width(4.dp))
+                    Spacer(modifier = Modifier.width(6.dp))
                     Text(
                         text = "$countryFlagEmoji $countryCode (+$callingCodeInt)",
                         style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Bold),
@@ -149,7 +139,7 @@ fun AddEditRuleDialog(
 
                 // Rule Scope Selector
                 Text(
-                    text = tr("rule_scope"),
+                    text = "How to Block:",
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.SemiBold,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
@@ -160,21 +150,21 @@ fun AddEditRuleDialog(
                     FilterChip(
                         selected = ruleType == RuleType.PREFIX,
                         onClick = { ruleType = RuleType.PREFIX },
-                        label = { Text(tr("prefix_series")) },
+                        label = { Text("Starting Digits") },
                         modifier = Modifier.weight(1f)
                     )
                     Spacer(modifier = Modifier.width(8.dp))
                     FilterChip(
                         selected = ruleType == RuleType.EXACT,
                         onClick = { ruleType = RuleType.EXACT },
-                        label = { Text(tr("exact_number")) },
+                        label = { Text("Full Number") },
                         modifier = Modifier.weight(1f)
                     )
                 }
 
                 // Rule Action Selector
                 Text(
-                    text = tr("rule_action"),
+                    text = "Action:",
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.SemiBold,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
@@ -185,19 +175,19 @@ fun AddEditRuleDialog(
                     FilterChip(
                         selected = ruleAction == RuleAction.BLOCK,
                         onClick = { ruleAction = RuleAction.BLOCK },
-                        label = { Text(tr("block_calls")) },
+                        label = { Text("🚫 Block") },
                         modifier = Modifier.weight(1f)
                     )
                     Spacer(modifier = Modifier.width(8.dp))
                     FilterChip(
                         selected = ruleAction == RuleAction.ALLOW,
                         onClick = { ruleAction = RuleAction.ALLOW },
-                        label = { Text(tr("allow_exception")) },
+                        label = { Text("✅ Always Allow") },
                         modifier = Modifier.weight(1f)
                     )
                 }
 
-                // Pattern Input with Hard-Coded Country Code Prefix
+                // Pattern Input with Calling Code Prefix
                 OutlinedTextField(
                     value = rawPatternText,
                     onValueChange = { newValue ->
@@ -217,7 +207,7 @@ fun AddEditRuleDialog(
                             )
                         }
                     },
-                    label = { Text(if (ruleType == RuleType.PREFIX) tr("prefix_pattern") else tr("phone_number")) },
+                    label = { Text(if (ruleType == RuleType.PREFIX) "Starting Digits" else "Full Phone Number") },
                     placeholder = { Text(if (ruleType == RuleType.PREFIX) "e.g. 140 or 7970" else "e.g. 7912345678") },
                     leadingIcon = {
                         Icon(
@@ -245,72 +235,24 @@ fun AddEditRuleDialog(
                 if (isAlreadyExists && rawPatternText.isNotBlank()) {
                     Spacer(modifier = Modifier.height(6.dp))
                     Text(
-                        text = tr("duplicate_error"),
+                        text = "⚠️ This number or pattern is already in your blocklist.",
                         style = MaterialTheme.typography.bodySmall.copy(fontSize = 12.sp),
                         color = MaterialTheme.colorScheme.error
                     )
                 } else if (!validationResult.isValid && rawPatternText.isNotBlank()) {
                     Spacer(modifier = Modifier.height(6.dp))
                     Text(
-                        text = validationResult.errorMessage ?: "Invalid pattern format",
+                        text = validationResult.errorMessage ?: "Please enter valid digits",
                         style = MaterialTheme.typography.bodySmall.copy(fontSize = 12.sp),
                         color = MaterialTheme.colorScheme.error
                     )
                 }
 
-                // Broadness Warning Alert
-                if (validationResult.warningMessage != null && !isAlreadyExists) {
-                    Spacer(modifier = Modifier.height(8.dp))
-                    Card(
-                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.5f)),
-                        shape = RoundedCornerShape(10.dp)
-                    ) {
-                        Row(
-                            modifier = Modifier.padding(10.dp),
-                            verticalAlignment = Alignment.CenterVertically
-                        ) {
-                            Icon(
-                                imageVector = Icons.Default.Warning,
-                                contentDescription = null,
-                                tint = MaterialTheme.colorScheme.error,
-                                modifier = Modifier.padding(end = 8.dp)
-                            )
-                            Text(
-                                text = validationResult.warningMessage,
-                                style = MaterialTheme.typography.bodySmall.copy(fontSize = 11.sp),
-                                color = MaterialTheme.colorScheme.onErrorContainer
-                            )
-                        }
-                    }
-                }
-
-                // Normalized Rule Form Preview Box
-                if (sanitizedPattern.isNotBlank() && normalizedInfo.e164Form.isNotBlank()) {
-                    Spacer(modifier = Modifier.height(10.dp))
-                    Card(
-                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)),
-                        shape = RoundedCornerShape(10.dp)
-                    ) {
-                        Column(modifier = Modifier.padding(10.dp)) {
-                            Text(
-                                text = tr("normalized_form"),
-                                style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
-                                color = MaterialTheme.colorScheme.primary
-                            )
-                            Text(
-                                text = "E.164: ${normalizedInfo.e164Form} • National: ${normalizedInfo.nationalForm}",
-                                style = MaterialTheme.typography.bodySmall.copy(fontSize = 11.sp),
-                                color = MaterialTheme.colorScheme.onSurfaceVariant
-                            )
-                        }
-                    }
-                }
-
                 // Example Numbers Preview
                 if (exampleMatches.isNotEmpty()) {
-                    Spacer(modifier = Modifier.height(8.dp))
+                    Spacer(modifier = Modifier.height(10.dp))
                     Text(
-                        text = tr("example_matches"),
+                        text = "Example Blocked Callers:",
                         style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
                         color = MaterialTheme.colorScheme.primary
                     )
@@ -334,12 +276,12 @@ fun AddEditRuleDialog(
                 enabled = sanitizedPattern.isNotBlank() && validationResult.isValid && !isAlreadyExists,
                 shape = RoundedCornerShape(10.dp)
             ) {
-                Text(if (initialRule != null) tr("save") else tr("add_rule"))
+                Text(if (initialRule != null) "Save Rule" else "Block Now")
             }
         },
         dismissButton = {
             TextButton(onClick = onDismissRequest) {
-                Text(tr("cancel"))
+                Text("Cancel")
             }
         }
     )

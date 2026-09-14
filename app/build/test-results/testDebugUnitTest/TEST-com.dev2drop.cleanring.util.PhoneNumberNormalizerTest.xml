@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.dev2drop.cleanring.util.PhoneNumberNormalizerTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-09-13T18:33:15.974Z" hostname="Rohits-MacBook-Air.local" time="0.011">
+<testsuite name="com.dev2drop.cleanring.util.PhoneNumberNormalizerTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-09-14T20:33:24.464Z" hostname="Rohits-MacBook-Air.local" time="0.01">
   <properties/>
-  <testcase name="testUKPhoneNumberMatching" classname="com.dev2drop.cleanring.util.PhoneNumberNormalizerTest" time="0.003"/>
-  <testcase name="testIndiaPhoneNumberMatching" classname="com.dev2drop.cleanring.util.PhoneNumberNormalizerTest" time="0.001"/>
-  <testcase name="testUSPhoneNumberMatching" classname="com.dev2drop.cleanring.util.PhoneNumberNormalizerTest" time="0.001"/>
+  <testcase name="testUKPhoneNumberMatching" classname="com.dev2drop.cleanring.util.PhoneNumberNormalizerTest" time="0.002"/>
+  <testcase name="testIndiaPhoneNumberMatching" classname="com.dev2drop.cleanring.util.PhoneNumberNormalizerTest" time="0.002"/>
+  <testcase name="testUSPhoneNumberMatching" classname="com.dev2drop.cleanring.util.PhoneNumberNormalizerTest" time="0.0"/>
   <testcase name="testGermanyPhoneNumberMatching" classname="com.dev2drop.cleanring.util.PhoneNumberNormalizerTest" time="0.002"/>
   <testcase name="testFormatForDisplay" classname="com.dev2drop.cleanring.util.PhoneNumberNormalizerTest" time="0.003"/>
   <testcase name="testCountryCallingCodes" classname="com.dev2drop.cleanring.util.PhoneNumberNormalizerTest" time="0.001"/>

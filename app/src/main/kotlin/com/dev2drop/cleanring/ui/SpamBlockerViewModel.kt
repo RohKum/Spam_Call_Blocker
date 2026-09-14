@@ -87,7 +87,6 @@ class SpamBlockerViewModel(
     private val _isEmergencyDisabled = MutableStateFlow(repository.isEmergencyDisabled())
     private val _isAllowContactsEnabled = MutableStateFlow(repository.isAllowContactsEnabled())
     private val _selectedLanguage = MutableStateFlow(repository.getAppLanguage())
-    private val _isSubscribed = MutableStateFlow(repository.isSubscribed())
     private val _isPaywallOpen = MutableStateFlow(false)
     private val _isAddEditDialogOpen = MutableStateFlow(false)
     private val _editingRule = MutableStateFlow<RuleEntity?>(null)
@@ -107,9 +106,9 @@ class SpamBlockerViewModel(
     }
 
     private val _subscriptionState = combine(
-        _isSubscribed,
+        billingManager.isSubscribed,
         _isPaywallOpen,
-        SpamBlockerApp.instance.billingManager.availableSubscriptions
+        billingManager.availableSubscriptions
     ) { isSub, isPaywall, subList ->
         val monthly = subList.firstOrNull { it.productId == BillingManager.PRODUCT_MONTHLY }?.formattedPrice ?: ""
         val yearly = subList.firstOrNull { it.productId == BillingManager.PRODUCT_YEARLY }?.formattedPrice ?: ""
@@ -163,7 +162,7 @@ class SpamBlockerViewModel(
         val trialActive = repository.isTrialActive()
         val trialDays = repository.getTrialDaysRemaining()
         val isSubscribed = subscription.isSubscribed
-        val autoPaywallOpen = subscription.isPaywallOpen || (!trialActive && !isSubscribed)
+        val autoPaywallOpen = (subscription.isPaywallOpen || (!trialActive && !isSubscribed)) && !isSubscribed
 
         SpamBlockerUiState(
             rules = filteredRules,
