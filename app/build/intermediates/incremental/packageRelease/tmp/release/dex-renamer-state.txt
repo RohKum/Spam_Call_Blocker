@@ -1,4 +1,0 @@
-#Tue Sep 08 13:20:56 IST 2026
-base.0=/Users/rohitkumar/Work/Android Projects/Spam Call Blocker/spamblocker/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex
