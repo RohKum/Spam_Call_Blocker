@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.dev2drop.cleanring.util.AdvancedRuleEngineTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-09-14T20:33:24.416Z" hostname="Rohits-MacBook-Air.local" time="0.009">
+  <properties/>
+  <testcase name="testScheduledHours" classname="com.dev2drop.cleanring.util.AdvancedRuleEngineTest" time="0.006"/>
+  <testcase name="testEmergencyMasterSwitch" classname="com.dev2drop.cleanring.util.AdvancedRuleEngineTest" time="0.002"/>
+  <testcase name="testTemporaryRuleExpiry" classname="com.dev2drop.cleanring.util.AdvancedRuleEngineTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
